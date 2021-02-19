@@ -1,0 +1,10 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <input name="name" ngModel required />{{(userForm.submitted &&
+  userForm.form.controls.name.errors.required) ? 'Required Name': ''}}
+  <input name="age" ngModel #user />
+  <button type="submit">Submit</button>
+</form>
